@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.yxy.business.BusinessApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.641 sec - in com.yxy.business.BusinessApplicationTests
