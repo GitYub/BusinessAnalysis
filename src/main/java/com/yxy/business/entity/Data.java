@@ -1,4 +1,4 @@
-package com.yxy.business.Entity;
+package com.yxy.business.entity;
 
 public class Data {
 

@@ -1,18 +1,30 @@
-package com.yxy.business.Entity;
+package com.yxy.business.entity;
+
+import com.google.gson.annotations.SerializedName;
 
 import java.util.ArrayList;
 
 public class Tanzhen {
 
+    @SerializedName("id")
     private String id;
+    @SerializedName("mmac")
     private String mmac;
+    @SerializedName("rate")
     private String rate;
+    @SerializedName("wssid")
     private String wssid;
+    @SerializedName("wmac")
     private String wmac;
+    @SerializedName("time")
     private String time;
+    @SerializedName("lat")
     private String lat;
+    @SerializedName("lom")
     private String lon;
+    @SerializedName("addr")
     private String addr;
+    @SerializedName("data")
     private ArrayList<Data> data;
 
     public Tanzhen() {
