@@ -1,4 +1,4 @@
-package com.yxy.business.util;
+package com.yxy.business.utils;
 
 import java.io.UnsupportedEncodingException;
 

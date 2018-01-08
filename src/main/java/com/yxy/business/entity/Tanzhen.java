@@ -1,6 +1,7 @@
 package com.yxy.business.entity;
 
 import com.google.gson.annotations.SerializedName;
+import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
 

@@ -3,7 +3,9 @@ package com.yxy.business.controller;
 import com.google.gson.Gson;
 import com.yxy.business.entity.Data;
 import com.yxy.business.entity.Tanzhen;
-import com.yxy.business.util.UrlUtil;
+import com.yxy.business.service.TzService;
+import com.yxy.business.utils.UrlUtil;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -13,6 +15,9 @@ import java.util.Iterator;
 
 @RestController
 public class TanzhenController {
+
+    @Autowired
+    private TzService tzService;
 
     @RequestMapping(value = "/mac", method = RequestMethod.POST)
     public void getData(@RequestBody String data) {
@@ -26,8 +31,12 @@ public class TanzhenController {
         Data tmp;
         int i = 1;
 
+        System.out.println(tanzhen.getTime());
+
         while (iterator.hasNext()) {
             tmp = iterator.next();
+
+            tzService.addData(tanzhen.getTime(), tmp.getMac());
             System.out.println("设备" + i++);
             System.out.println("mac: " + tmp.getMac());
             System.out.println("rssi: " + tmp.getRssi());

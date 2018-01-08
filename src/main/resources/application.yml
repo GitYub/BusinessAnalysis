@@ -2,6 +2,9 @@ server:
   port: 9999
   context-path: /
 
-
-kafkapool:
-  file: /kafkapool.properties
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql//120.79.139.121:3306/BA
+    username: root
+    password: 2254655
