@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.io.IOException;
 import java.util.Iterator;
 
 @RestController
@@ -20,7 +21,7 @@ public class TanzhenController {
     private TzService tzService;
 
     @RequestMapping(value = "/mac", method = RequestMethod.POST)
-    public void getData(@RequestBody String data) {
+    public void getData(@RequestBody String data) throws IOException {
 
         data = UrlUtil.getURLDecoderString(data);
         data = data.substring(5);
@@ -35,15 +36,15 @@ public class TanzhenController {
 
         while (iterator.hasNext()) {
             tmp = iterator.next();
-
-            tzService.addData(tanzhen.getTime(), tmp.getMac());
+            //tzService.addData(tanzhen.getTime(), tmp.getMac());
             System.out.println("设备" + i++);
+
             System.out.println("mac: " + tmp.getMac());
-            System.out.println("rssi: " + tmp.getRssi());
-            System.out.println("ts: " + tmp.getTs());
-            System.out.println("tmc: " + tmp.getTmc());
-            System.out.println("tc: " + tmp.getTc());
-            System.out.println("ds: " + tmp.getDs());
+//            System.out.println("rssi: " + tmp.getRssi());
+//            System.out.println("ts: " + tmp.getTs());
+//            System.out.println("tmc: " + tmp.getTmc());
+//            System.out.println("tc: " + tmp.getTc());
+//            System.out.println("ds: " + tmp.getDs());
 //            System.out.println("e0: " + tmp.getEssid0());
 //            System.out.println("e1: " + tmp.getEssid1());
 //            System.out.println("e2: " + tmp.getEssid2());
